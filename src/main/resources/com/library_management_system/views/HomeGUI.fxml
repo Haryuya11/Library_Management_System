@@ -25,7 +25,7 @@
                 <Font size="25.0" />
             </font>
         </Label>
-        <Label layoutX="1218.0" prefHeight="70.0" prefWidth="247.0" text="Welcome, Admin " textFill="WHITE">
+        <Label layoutX="1051.0" prefHeight="70.0" prefWidth="176.0" text="Welcome, " textFill="WHITE">
             <font>
                 <Font size="25.0" />
             </font>
@@ -40,6 +40,11 @@
                 <Font size="30.0" />
             </font>
         </Button>
+      <TextField fx:id="showUserName" editable="false" layoutX="1213.0" prefHeight="70.0" prefWidth="230.0" style="-fx-border-width: 0 0 0 0; -fx-text-fill: white; -fx-font-size: 25; -fx-background-color: translate;">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </TextField>
     </Pane>
     <Pane layoutY="70.0" prefHeight="815.0" prefWidth="269.0" style="-fx-background-color: rgb(51,51,51);">
         <Pane layoutY="52.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: red;">
@@ -59,7 +64,23 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <Pane layoutY="152.0" onMouseClicked="#goToManageBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+      <Pane layoutY="152.0" onMouseClicked="#goToUserDetail" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+         <children>
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text=" User Detail" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/user-2-account.256x256.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+        <Pane layoutY="202.0" onMouseClicked="#goToManageBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Manage Book" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />
@@ -71,7 +92,7 @@
                 </graphic>
             </Label>
         </Pane>
-        <Pane layoutY="202.0" onMouseClicked="#goToManageStudent" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+        <Pane layoutY="252.0" onMouseClicked="#goToManageStudent" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Manage Student" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />
@@ -83,7 +104,7 @@
                 </graphic>
             </Label>
         </Pane>
-        <Pane layoutY="252.0" onMouseClicked="#goToIssueBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+        <Pane layoutY="302.0" onMouseClicked="#goToIssueBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Issue Book" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />
@@ -95,7 +116,7 @@
                 </graphic>
             </Label>
         </Pane>
-        <Pane layoutY="302.0" onMouseClicked="#goToReturnBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+        <Pane layoutY="352.0" onMouseClicked="#goToReturnBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Return Book" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />
@@ -107,7 +128,7 @@
                 </graphic>
             </Label>
         </Pane>
-        <Pane layoutY="352.0" onMouseClicked="#goToViewRecord" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+        <Pane layoutY="402.0" onMouseClicked="#goToViewRecord" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="View Records" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />
@@ -119,7 +140,7 @@
                 </graphic>
             </Label>
         </Pane>
-      <Pane layoutY="402.0" onMouseClicked="#goToViewIssuedBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+      <Pane layoutY="452.0" onMouseClicked="#goToViewIssuedBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="View Issued Books" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />
@@ -131,7 +152,7 @@
                 </graphic>
             </Label>
         </Pane>
-        <Pane layoutY="452.0" onMouseClicked="#goToViewOverdueBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+        <Pane layoutY="502.0" onMouseClicked="#goToViewOverdueBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
             <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="View Overdue Books" textAlignment="CENTER" textFill="WHITE">
                 <font>
                     <Font size="18.0" />

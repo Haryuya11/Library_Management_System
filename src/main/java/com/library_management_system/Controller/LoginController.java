@@ -1,7 +1,6 @@
 package com.library_management_system.Controller;
 
 import com.library_management_system.DAO.UserDAO;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -26,6 +25,15 @@ public class LoginController implements Initializable {
     @FXML
     private CheckBox showPasswordCheckbox;
     private static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
+    private static String loggedInUsername;
+
+    public static void setLoggedInUsername(String username) {
+        loggedInUsername = username;
+    }
+
+    public static String getLoggedInUsername() {
+        return loggedInUsername;
+    }
 
     public void exitApp() {
         System.exit(0);
@@ -36,6 +44,7 @@ public class LoginController implements Initializable {
         String password = txt_password.getText();
 
         if (UserDAO.checkUser(username, password)) {
+            setLoggedInUsername(username);
             goToHomePage();
         } else {
             showAlert(Alert.AlertType.ERROR, "Invalid username or password");
@@ -75,7 +84,7 @@ public class LoginController implements Initializable {
         }
     }
 
-    public void togglePasswordVisibility(ActionEvent actionEvent) {
+    public void togglePasswordVisibility() {
         if (showPasswordCheckbox.isSelected()) {
             txt_passwordVisible.setVisible(true);
             txt_password.setVisible(false);
@@ -87,12 +96,8 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        txt_password.textProperty().addListener((observable, oldValue, newValue) -> {
-            txt_passwordVisible.setText(newValue);
-        });
+        txt_password.textProperty().addListener((observable, oldValue, newValue) -> txt_passwordVisible.setText(newValue));
 
-        txt_passwordVisible.textProperty().addListener((observable, oldValue, newValue) -> {
-            txt_password.setText(newValue);
-        });
+        txt_passwordVisible.textProperty().addListener((observable, oldValue, newValue) -> txt_password.setText(newValue));
     }
 }

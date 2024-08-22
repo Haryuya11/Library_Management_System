@@ -38,6 +38,8 @@ public class HomeController implements Initializable {
     private TextField numberOfIssuedBooks;
     @FXML
     private TextField numberOfOverdueBooks;
+    @FXML
+    private TextField showUserName;
     private static final Logger LOGGER = Logger.getLogger(HomeController.class.getName());
 
     public void exitApp() {
@@ -52,10 +54,17 @@ public class HomeController implements Initializable {
         numberOfStudents.setText(String.valueOf(getCount("SELECT COUNT(*) FROM students")));
         numberOfIssuedBooks.setText(String.valueOf(getCount("SELECT COUNT(*) FROM issue_book_detail WHERE status = 'issued'")));
         numberOfOverdueBooks.setText(String.valueOf(getCount("SELECT COUNT(*) FROM issue_book_detail WHERE due_date < GETDATE() AND status = 'pending'")));
+        String username = getLoggedInUsername();
+        showUserName.setText(username);
         populatePieChartAllBooks();
         populatePieChartIssuedBooks();
         setupPieChartClickHandler(pieChartAllBooks);
         setupPieChartClickHandler(pieChartIssuedBooks);
+    }
+
+    private String getLoggedInUsername() {
+        return LoginController.getLoggedInUsername(); // Example placeholder
+
     }
 
     public void goToManageBook(MouseEvent event) {
@@ -254,5 +263,8 @@ private void populatePieChartAllBooks() {
         alert.setHeaderText(null);
         alert.setContentText("ID: " + book_id + "\nName: " + book_name + "\nAuthor: " + author + "\nQuantity: " + quantity);
         alert.showAndWait();
+    }
+
+    public void goToUserDetail(MouseEvent event) {
     }
 }
