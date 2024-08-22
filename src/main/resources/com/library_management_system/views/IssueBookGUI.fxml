@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1523.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library_management_system.Controller.IssueBookController">
+    <stylesheets>
+        <URL value="@../style/style.css" />
+    </stylesheets>
+    <Pane layoutY="-15.0" prefHeight="900.0" prefWidth="501.0" style="-fx-background-color: rgb(255,21,21);">
+        <Button layoutY="14.0" mnemonicParsing="false" onAction="#backHomePage" prefHeight="48.0" prefWidth="101.0" style="-fx-background-color: rgb(102,102,255);" text="Back" textFill="WHITE">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/icons8_Rewind_48px.png" />
+                </ImageView>
+            </graphic>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="25.0" layoutY="346.0" text="Book ID:" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="118.0" layoutY="108.0" prefHeight="85.0" prefWidth="249.0" text="Book Detail" textFill="WHITE">
+            <font>
+                <Font size="40.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/icons8_Literature_100px_1.png"/>
+                </ImageView>
+            </graphic>
+        </Label>
+        <Pane layoutX="93.0" layoutY="191.0" prefHeight="5.0" prefWidth="300.0" style="-fx-background-color: white;" />
+        <Label layoutX="25.0" layoutY="443.0" text="Book Name:" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="534.0" text="Author" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="23.0" layoutY="622.0" text="Quantity:" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="txt_bookID" editable="false" layoutX="189.0" layoutY="334.0" prefHeight="48.0" prefWidth="275.0" style="-fx-background-color: rgb(255,21,21); -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font></TextField>
+        <TextField fx:id="txt_bookName" editable="false" layoutX="189.0" layoutY="437.0" prefHeight="48.0" prefWidth="275.0" style="-fx-background-color: rgb(255,21,21); -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font></TextField>
+        <TextField fx:id="txt_Author" editable="false" layoutX="189.0" layoutY="522.0" prefHeight="48.0" prefWidth="275.0" style="-fx-background-color: rgb(255,21,21); -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font></TextField>
+        <TextField fx:id="txt_Quantity" editable="false" layoutX="189.0" layoutY="616.0" prefHeight="48.0" prefWidth="275.0" style="-fx-background-color: rgb(255,21,21); -fx-text-fill: white;">
+         <font>
+            <Font size="25.0" />
+         </font></TextField>
+    </Pane>
+    <Pane layoutX="517.0" layoutY="-15.0" prefHeight="900.0" prefWidth="501.0"
+          style="-fx-background-color: rgb(102,102,255);">
+        <Label layoutX="25.0" layoutY="346.0" text="Student ID" textFill="WHITE">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Label layoutX="84.0" layoutY="108.0" prefHeight="85.0" prefWidth="318.0" text="Student Detail"
+               textFill="WHITE">
+            <font>
+                <Font size="40.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/icons8_Student_Registration_100px_2.png"/>
+                </ImageView>
+            </graphic>
+        </Label>
+        <Pane layoutX="77.0" layoutY="191.0" prefHeight="5.0" prefWidth="331.0" style="-fx-background-color: white;"/>
+        <Label layoutX="25.0" layoutY="443.0" text="Student Name:" textFill="WHITE">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Label layoutX="25.0" layoutY="534.0" text="Student Year:" textFill="WHITE">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Label layoutX="23.0" layoutY="622.0" text="Student Major:" textFill="WHITE">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="txt_studentID" editable="false" layoutX="212.0" layoutY="334.0" prefHeight="48.0"
+                   prefWidth="275.0" style="-fx-background-color: rgb(102,102,255); -fx-text-fill: white;">
+        <font>
+            <Font size="25.0"/>
+        </font>
+        </TextField>
+        <TextField fx:id="txt_studentName" editable="false" layoutX="212.0" layoutY="437.0" prefHeight="48.0"
+                   prefWidth="275.0" style="-fx-background-color: rgb(102,102,255); -fx-text-fill: white;">
+        <font>
+            <Font size="25.0"/>
+        </font>
+        </TextField>
+        <TextField fx:id="txt_studentYear" editable="false" layoutX="212.0" layoutY="522.0" prefHeight="48.0"
+                   prefWidth="275.0" style="-fx-background-color: rgb(102,102,255); -fx-text-fill: white;">
+        <font>
+            <Font size="25.0"/>
+        </font>
+        </TextField>
+        <TextField fx:id="txt_studentMajor" editable="false" layoutX="212.0" layoutY="616.0" prefHeight="48.0"
+                   prefWidth="275.0" style="-fx-background-color: rgb(102,102,255); -fx-text-fill: white;">
+        <font>
+            <Font size="25.0"/>
+        </font>
+        </TextField>
+    </Pane>
+    <Pane layoutX="1018.0" layoutY="-15.0" prefHeight="900.0" prefWidth="514.0" style="-fx-background-color: white;">
+        <Label layoutX="32.0" layoutY="350.0" text="Book ID:" textFill="#ff3333">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Label layoutX="98.0" layoutY="107.0" prefHeight="85.0" prefWidth="318.0" text="Issue Book" textFill="#ff3333">
+            <font>
+                <Font size="40.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/icons8_Books_52px_1.png"/>
+                </ImageView>
+            </graphic>
+        </Label>
+        <Pane layoutX="78.0" layoutY="192.0" prefHeight="5.0" prefWidth="312.0"
+              style="-fx-background-color: rgb(255,21,21);"/>
+        <Label layoutX="32.0" layoutY="446.0" text="Student ID:" textFill="#ff3333">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="enterBookID" layoutX="189.0" layoutY="340.0" onAction="#handleBookIDEnter" prefHeight="48.0"
+                   prefWidth="275.0" promptText="Enter Book ID"
+                   style="-fx-border-width: 0 0 2 0; -fx-border-color: rgb(255,51,51); -fx-background-color: white;"/>
+        <TextField fx:id="enterStudentID" layoutX="189.0" layoutY="440.0" onAction="#handleStudentIDEnter"
+                   prefHeight="48.0" prefWidth="275.0" promptText="Enter Student ID"
+                   style="-fx-background-color: white; -fx-border-width: 0 0 2 0; -fx-border-color: rgb(255,51,51);"/>
+        <DatePicker fx:id="issueDate" layoutX="189.0" layoutY="540.0" prefHeight="48.0" prefWidth="275.0"
+                    style="-fx-border-color: rgb(255,51,51); -fx-border-width: 2 2 2 2; -fx-background-color: white;"/>
+        <Label layoutX="32.0" layoutY="550.0" text="Issue Date:" textFill="#ff3333">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <DatePicker fx:id="dueDate" layoutX="189.0" layoutY="640.0" prefHeight="48.0" prefWidth="275.0"
+                    style="-fx-border-color: rgb(255,51,51); -fx-border-width: 2 2 2 2; -fx-background-color: white;"/>
+        <Label layoutX="32.0" layoutY="650.0" text="Due Date:" textFill="#ff3333">
+            <font>
+                <Font size="25.0"/>
+            </font>
+        </Label>
+        <Button layoutX="456.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="26.0"
+                prefWidth="40.0" style="-fx-background-color: rgb(255,51,51);" text="X" textFill="WHITE">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Button>
+        <Button layoutX="151.0" layoutY="764.0" mnemonicParsing="false" onAction="#issueBook" prefHeight="72.0"
+                prefWidth="213.0" styleClass="button-signup" text="Issue Book">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Button>
+    </Pane>
+</AnchorPane>

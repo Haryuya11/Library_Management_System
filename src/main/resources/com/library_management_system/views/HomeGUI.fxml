@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="885.0" prefWidth="1523.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library_management_system.Controller.HomeController">
+    <stylesheets>
+        <URL value="@../style/style.css" />
+    </stylesheets>
+    <Pane prefHeight="70.0" prefWidth="1523.0" style="-fx-background-color: rgb(102,102,255);">
+        <ImageView fitHeight="48.0" fitWidth="48.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/icons8_menu_48px_1.png" />
+        </ImageView>
+        <Pane layoutX="79.0" layoutY="10.0" prefHeight="50.0" prefWidth="5.0" style="-fx-background-color: rgb(51,51,51);" />
+        <Label layoutX="96.0" layoutY="17.0" text="Library Management System" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="1218.0" prefHeight="70.0" prefWidth="247.0" text="Welcome, Admin " textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+            <graphic>
+                <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/male_user_50px.png" />
+                </ImageView>
+            </graphic>
+        </Label>
+        <Button layoutX="1465.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="26.0" prefWidth="40.0" styleClass="button-exit" text="X">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Button>
+    </Pane>
+    <Pane layoutY="70.0" prefHeight="815.0" prefWidth="269.0" style="-fx-background-color: rgb(51,51,51);">
+        <Pane layoutY="52.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: red;">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Home Page" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/home_24px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Label layoutX="32.0" layoutY="102.0" prefHeight="50.0" prefWidth="205.0" text="Features" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Pane layoutY="152.0" onMouseClicked="#goToManageBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Manage Book" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Book_26px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Pane layoutY="202.0" onMouseClicked="#goToManageStudent" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Manage Student" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Read_Online_26px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Pane layoutY="252.0" onMouseClicked="#goToIssueBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Issue Book" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Book_Shelf_50px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Pane layoutY="302.0" onMouseClicked="#goToReturnBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="Return Book" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Return_Purchase_26px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Pane layoutY="352.0" onMouseClicked="#goToViewRecord" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="View Records" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_View_Details_26px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+      <Pane layoutY="402.0" onMouseClicked="#goToViewIssuedBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="View Issued Books" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Books_26px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Pane layoutY="452.0" onMouseClicked="#goToViewOverdueBook" prefHeight="50.0" prefWidth="255.0" styleClass="homePane">
+            <Label layoutX="32.0" prefHeight="50.0" prefWidth="205.0" text="View Overdue Books" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Conference_26px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+        <Pane layoutY="765.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: rgb(102,102,255);">
+            <Label layoutX="32.0" onMouseClicked="#logOut" prefHeight="50.0" prefWidth="205.0" text="Logout" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font size="18.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_Exit_26px_2.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+        </Pane>
+    </Pane>
+    <Pane layoutX="253.0" layoutY="70.0" prefHeight="815.0" prefWidth="1272.0" style="-fx-background-color: white;">
+        <Pane layoutX="41.0" layoutY="65.0" prefHeight="109.0" prefWidth="230.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 12 0 0 0; -fx-border-color: rgb(255,51,51);">
+         <TextField fx:id="numberOfBooks" editable="false" layoutX="104.0" layoutY="35.0" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 0 0 0 0;" />
+              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="50.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../icons/icons8_Book_Shelf_50px.png" />
+              </ImageView>
+        </Pane>
+        <Label layoutX="41.0" layoutY="34.0" style="-fx-text-fill: rgb(105,105,105);" text="No of books">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Pane layoutX="340.0" layoutY="65.0" prefHeight="109.0" prefWidth="230.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 12 0 0 0; -fx-border-color: rgb(102,102,255);">
+            <Label layoutX="70.0" layoutY="26.0" style="-fx-text-fill: rgb(105,105,105);">
+                <font>
+                    <Font name="System Bold" size="40.0" />
+                </font>
+            </Label>
+              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="38.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../icons/icons8_People_50px.png" />
+              </ImageView>
+         <TextField fx:id="numberOfStudents" editable="false" layoutX="90.0" layoutY="34.0" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 0 0 0 0;" />
+        </Pane>
+        <Label layoutX="340.0" layoutY="34.0" style="-fx-text-fill: rgb(105,105,105);" text="No of students">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Pane layoutX="641.0" layoutY="65.0" prefHeight="109.0" prefWidth="230.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 12 0 0 0; -fx-border-color: rgb(255,51,51);">
+              <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="27.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../icons/icons8_Sell_50px.png" />
+              </ImageView>
+         <TextField fx:id="numberOfIssuedBooks" editable="false" layoutX="84.0" layoutY="35.0" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 0 0 0 0;" />
+        </Pane>
+        <Label layoutX="641.0" layoutY="34.0" style="-fx-text-fill: rgb(105,105,105);" text="Issued books">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Pane layoutX="935.0" layoutY="65.0" prefHeight="109.0" prefWidth="230.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 12 0 0 0; -fx-border-color: rgb(102,102,255);">
+            <Label layoutX="28.0" layoutY="28.0" style="-fx-text-fill: rgb(105,105,105);">
+                <font>
+                    <Font name="System Bold" size="40.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/icons8_List_of_Thumbnails_50px.png" />
+                    </ImageView>
+                </graphic>
+            </Label>
+         <TextField fx:id="numberOfOverdueBooks" editable="false" layoutX="91.0" layoutY="35.0" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(240,240,240); -fx-border-width: 0 0 0 0;" />
+        </Pane>
+        <Label layoutX="935.0" layoutY="34.0" style="-fx-text-fill: rgb(105,105,105);" text="Overdue books">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <PieChart fx:id="pieChartAllBooks" layoutX="100.0" layoutY="262.0" legendVisible="false" prefHeight="416.0" prefWidth="481.0" title="All Books Detail" />
+      <PieChart fx:id="pieChartIssuedBooks" layoutX="695.0" layoutY="262.0" legendVisible="false" prefHeight="416.0" prefWidth="481.0" title="All Issued Books Detail" />
+    </Pane>
+</AnchorPane>

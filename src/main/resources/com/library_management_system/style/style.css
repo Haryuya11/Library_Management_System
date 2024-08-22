@@ -1,0 +1,55 @@
+.text-field, .password-field {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: white;
+    -fx-font-size: 17px;
+}
+
+.button-signup {
+    -fx-background-color: rgb(255, 51, 51);
+    -fx-background-radius: 50;
+    -fx-padding: 10 20;
+    -fx-text-fill: white;
+}
+
+.button-login {
+    -fx-background-color: rgb(51, 51, 255);
+    -fx-background-radius: 50;
+    -fx-padding: 10 20;
+    -fx-text-fill: white;
+}
+
+/* Định dạng chung cho Label */
+.label-title {
+    -fx-font-size: 25px;
+    -fx-text-fill: white;
+}
+
+.label-subtitle, .label-text {
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+.pane-white {
+    -fx-background-color: white;
+}
+
+.pane-blue {
+    -fx-background-color: rgb(102, 102, 255);
+}
+
+.button-exit {
+    -fx-background-color: rgb(102, 102, 255);
+    -fx-text-fill: white;
+}
+
+.homePane {
+    -fx-background-color: rgb(51, 51, 51); /* Default background color */
+    -fx-border-color: transparent; /* Default border color */
+}
+
+.homePane:hover {
+    -fx-background-color: rgb(255, 51, 51); /* Background color when hovered */
+    -fx-border-color: rgb(255, 51, 51); /* Border color when hovered */
+    -fx-cursor: hand;
+}
