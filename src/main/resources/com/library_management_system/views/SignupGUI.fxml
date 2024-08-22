@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -11,57 +12,58 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0"
-            prefWidth="1523.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.library_management_system.Controller.SignupController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="1523.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.library_management_system.Controller.SignupController">
    <stylesheets>
-      <URL value="@../style/style.css"/>
+      <URL value="@../style/style.css" />
    </stylesheets>
    <Pane prefHeight="830.0" prefWidth="990.0" styleClass="pane-white">
       <ImageView fitHeight="828.0" fitWidth="990.0" layoutX="-2.0" layoutY="1.0" pickOnBounds="true">
-         <Image url="@../icons/signup-library-icon.png"/>
+         <Image url="@../icons/signup-library-icon.png" />
       </ImageView>
    </Pane>
    <Pane layoutX="989.0" prefHeight="830.0" prefWidth="534.0" styleClass="pane-blue">
-      <Label layoutX="198.0" layoutY="90.0" styleClass="label-title" text="Signup Page"/>
-      <Label layoutX="174.0" layoutY="136.0" styleClass="label-subtitle" text="Create new account here"/>
-      <Label layoutX="119.0" layoutY="238.0" styleClass="label-text" text="Username"/>
-      <TextField fx:id="txt_username" layoutX="111.0" layoutY="269.0" prefHeight="36.0" prefWidth="355.0"
-                 promptText="Enter Username" style="-fx-text-fill: white;" styleClass="text-field"/>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="52.0" layoutY="264.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../icons/icons8_Account_50px.png"/>
+      <Label layoutX="198.0" layoutY="49.0" styleClass="label-title" text="Signup Page" />
+      <Label layoutX="174.0" layoutY="95.0" styleClass="label-subtitle" text="Create new account here" />
+      <Label layoutX="127.0" layoutY="150.0" styleClass="label-text" text="Username" />
+      <TextField fx:id="txt_username" layoutX="119.0" layoutY="180.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Username" style="-fx-text-fill: white;" styleClass="text-field" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../icons/icons8_Account_50px.png" />
       </ImageView>
-      <Label layoutX="119.0" layoutY="325.0" styleClass="label-text" text="Password"/>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="52.0" layoutY="351.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../icons/icons8_Secure_50px.png"/>
+      <Label layoutX="127.0" layoutY="240.0" styleClass="label-text" text="Password" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../icons/icons8_Secure_50px.png" />
       </ImageView>
-      <Label layoutX="119.0" layoutY="497.0" styleClass="label-text" text="Email"/>
-      <TextField fx:id="txt_email" layoutX="111.0" layoutY="528.0" prefHeight="36.0" prefWidth="355.0"
-                 promptText="Enter Email" style="-fx-text-fill: white;" styleClass="text-field"/>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="52.0" layoutY="523.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../icons/icons8_Secured_Letter_50px.png"/>
+      <Label layoutX="127.0" layoutY="420.0" styleClass="label-text" text="Email" />
+      <TextField fx:id="txt_email" layoutX="119.0" layoutY="450.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Email" style="-fx-text-fill: white;" styleClass="text-field" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../icons/icons8_Secured_Letter_50px.png" />
       </ImageView>
-      <PasswordField fx:id="txt_password" layoutX="107.0" layoutY="361.0" prefHeight="36.0" prefWidth="355.0"
-                     promptText="Enter Password" style="-fx-text-fill: white;" styleClass="password-field"/>
-      <Button layoutX="166.0" layoutY="644.0" mnemonicParsing="false" onAction="#insertSignupDetail"
-              prefHeight="67.0" prefWidth="224.0" styleClass="button-signup" text="Sign up"/>
-      <Button layoutX="476.0" layoutY="-7.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="26.0"
-              prefWidth="40.0" styleClass="button-exit" text="X">
+      <PasswordField fx:id="txt_password" layoutX="119.0" layoutY="270.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Password" style="-fx-text-fill: white;" styleClass="password-field" />
+      <Button layoutX="162.0" layoutY="669.0" mnemonicParsing="false" onAction="#insertSignupDetail" prefHeight="67.0" prefWidth="224.0" styleClass="button-signup" text="Sign up" />
+      <Button layoutX="476.0" layoutY="-7.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="26.0" prefWidth="40.0" styleClass="button-exit" text="X">
          <font>
-            <Font size="30.0"/>
+            <Font size="30.0" />
          </font>
       </Button>
-      <Label layoutX="119.0" layoutY="415.0" styleClass="label-text" text="Confirm Password"/>
-      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="52.0" layoutY="441.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <Image url="@../icons/icons8_Secure_50px.png"/>
+      <Label layoutX="127.0" layoutY="330.0" styleClass="label-text" text="Confirm Password" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../icons/icons8_Secure_50px.png" />
       </ImageView>
-      <PasswordField fx:id="txt_confirm_password" layoutX="107.0" layoutY="451.0" prefHeight="36.0" prefWidth="355.0"
-                     promptText="Enter Password" style="-fx-text-fill: white;" styleClass="password-field"/>
-      <Label layoutX="129.0" layoutY="727.0" onMouseClicked="#goToLogin" style="-fx-cursor: hand;"
-             styleClass="label-title" text="Already a user? Login here!"/>
+      <PasswordField fx:id="txt_passwordConfirm" layoutX="115.0" layoutY="360.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Password" style="-fx-text-fill: white;" styleClass="password-field" />
+      <Label layoutX="125.0" layoutY="752.0" onMouseClicked="#goToLogin" style="-fx-cursor: hand;" styleClass="label-title" text="Already a user? Login here!" />
+      <CheckBox fx:id="showPasswordCheckbox" layoutX="74.0" layoutY="608.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" prefHeight="36.0" prefWidth="200.0" text="Show Password" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="127.0" layoutY="510.0" styleClass="label-text" text="Phone" />
+      <TextField fx:id="txt_phone" layoutX="119.0" layoutY="540.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Phone Number" style="-fx-text-fill: white;" styleClass="text-field" />
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/icons8_Google_Mobile_50px.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_passwordVisible" layoutX="119.0" layoutY="270.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Password" style="-fx-text-fill: white;" styleClass="text-field" visible="false" />
+      <TextField fx:id="txt_passwordConfirmVisible" layoutX="115.0" layoutY="360.0" prefHeight="36.0" prefWidth="355.0" promptText="Enter Password" style="-fx-text-fill: white;" styleClass="text-field" visible="false" />
    </Pane>
 </AnchorPane>

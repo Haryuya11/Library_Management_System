@@ -10,6 +10,7 @@
     -fx-background-radius: 50;
     -fx-padding: 10 20;
     -fx-text-fill: white;
+    -fx-font-size: 17px;
 }
 
 .button-login {
@@ -17,6 +18,7 @@
     -fx-background-radius: 50;
     -fx-padding: 10 20;
     -fx-text-fill: white;
+    -fx-font-size: 17px;
 }
 
 /* Định dạng chung cho Label */

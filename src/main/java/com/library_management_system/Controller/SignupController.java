@@ -1,15 +1,13 @@
 package com.library_management_system.Controller;
 
 import com.library_management_system.DAO.UserDAO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DialogPane;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -29,7 +27,15 @@ public class SignupController implements Initializable {
     @FXML
     TextField txt_email;
     @FXML
-    PasswordField txt_confirm_password;
+    PasswordField txt_passwordConfirm;
+
+    @FXML
+    private TextField txt_passwordVisible;
+    @FXML
+    private TextField txt_passwordConfirmVisible;
+
+    @FXML
+    private CheckBox showPasswordCheckbox;
 
     static Boolean checkUsername = false, checkPassword = false, checkConfirmPassword = false, checkEmail;
     private static final Logger LOGGER = Logger.getLogger(SignupController.class.getName());
@@ -74,7 +80,7 @@ public class SignupController implements Initializable {
         });
 
 
-        txt_confirm_password.focusedProperty().addListener((observable, oldValue, newValue) -> {
+        txt_passwordConfirm.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue) {
                 validateConfirmPassword();
             }
@@ -84,6 +90,22 @@ public class SignupController implements Initializable {
             if (!newValue) {
                 validateEmail();
             }
+        });
+
+        txt_password.textProperty().addListener((observable, oldValue, newValue) -> {
+            txt_passwordVisible.setText(newValue);
+        });
+
+        txt_passwordVisible.textProperty().addListener((observable, oldValue, newValue) -> {
+            txt_password.setText(newValue);
+        });
+
+        txt_passwordConfirm.textProperty().addListener((observable, oldValue, newValue) -> {
+            txt_passwordConfirmVisible.setText(newValue);
+        });
+
+        txt_passwordConfirmVisible.textProperty().addListener((observable, oldValue, newValue) -> {
+            txt_passwordConfirm.setText(newValue);
         });
     }
 
@@ -99,7 +121,7 @@ public class SignupController implements Initializable {
     }
 
     private void validateConfirmPassword() {
-        checkConfirmPassword = txt_password.getText().equals(txt_confirm_password.getText());
+        checkConfirmPassword = txt_password.getText().equals(txt_passwordConfirm.getText());
     }
 
     private void validateEmail() {
@@ -111,7 +133,7 @@ public class SignupController implements Initializable {
 
     private void showAlert(Alert.AlertType alertType, String message) {
         Alert alert = new Alert(alertType);
-        alert.setTitle("Login Result");
+        alert.setTitle("Register Result");
         alert.setHeaderText(null);
         alert.setContentText(message);
         DialogPane dialogPane = alert.getDialogPane();
@@ -127,6 +149,20 @@ public class SignupController implements Initializable {
             stage.setScene(new Scene(root));
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, "Failed to load Login GUI", e);
+        }
+    }
+
+    public void togglePasswordVisibility(ActionEvent actionEvent) {
+        if (showPasswordCheckbox.isSelected()) {
+            txt_passwordVisible.setVisible(true);
+            txt_passwordConfirmVisible.setVisible(true);
+            txt_password.setVisible(false);
+            txt_passwordConfirm.setVisible(false);
+        } else {
+            txt_password.setVisible(true);
+            txt_passwordConfirm.setVisible(true);
+            txt_passwordVisible.setVisible(false);
+            txt_passwordConfirmVisible.setVisible(false);
         }
     }
 }

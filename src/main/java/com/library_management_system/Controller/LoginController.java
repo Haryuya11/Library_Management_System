@@ -1,25 +1,30 @@
 package com.library_management_system.Controller;
 
 import com.library_management_system.DAO.UserDAO;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DialogPane;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.net.URL;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class LoginController {
+public class LoginController implements Initializable {
 
     @FXML
     TextField txt_username;
     @FXML
     PasswordField txt_password;
+    @FXML
+    private TextField txt_passwordVisible;
+    @FXML
+    private CheckBox showPasswordCheckbox;
     private static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
 
     public void exitApp() {
@@ -68,5 +73,26 @@ public class LoginController {
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Failed to load Home GUI", e);
         }
+    }
+
+    public void togglePasswordVisibility(ActionEvent actionEvent) {
+        if (showPasswordCheckbox.isSelected()) {
+            txt_passwordVisible.setVisible(true);
+            txt_password.setVisible(false);
+        } else {
+            txt_password.setVisible(true);
+            txt_passwordVisible.setVisible(false);
+        }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        txt_password.textProperty().addListener((observable, oldValue, newValue) -> {
+            txt_passwordVisible.setText(newValue);
+        });
+
+        txt_passwordVisible.textProperty().addListener((observable, oldValue, newValue) -> {
+            txt_password.setText(newValue);
+        });
     }
 }
