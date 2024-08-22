@@ -4,6 +4,7 @@ module com.library_management_system {
 
     requires org.controlsfx.controls;
     requires java.sql;
+    requires jbcrypt;
 
     opens com.library_management_system to javafx.fxml;
     exports com.library_management_system;
